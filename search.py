@@ -2,6 +2,8 @@ from qsort import qsort
 
 
 def binary_search(search_item, a_list: list) -> bool:
+    ''' binary search takes two arguments - the search item and a list.
+        an attempt is made to sort the list before search is performed '''
     try:
         START = 0
         a_sorted_list = qsort(a_list)
@@ -19,6 +21,3 @@ def binary_search(search_item, a_list: list) -> bool:
         print(f"type mismatch: unable to search for {type(search_item)} in list")
     except UnboundLocalError as err:
         print(err)
-
-
-print(binary_search(1, ['g', 'h', 'a', 'c', 'd']))
