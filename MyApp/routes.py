@@ -74,5 +74,5 @@ def viewproduct(jewel):
 @hello.route('/hello/<name>')
 def hello(name=None):
     # berry_image = url_for('static', filename='images/image001.jpg')
-    imageURL = url_for('static', filename='images/')  # interesting filename use as file path to images
+    imageURL = url_for('static', filename='images/')  # interesting can use filename as file path to images
     return render_template('hello.html', name=name, imageURL=imageURL)
