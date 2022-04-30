@@ -1,0 +1,19 @@
+body {
+    background-color: coral;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+p {
+    font-family: Time New Roman;
+    font-size: 14px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px blue solid;
+}
+div{
+    color: cyan;
+    margin-left: 50px;
+    font-size: 30px;
+}

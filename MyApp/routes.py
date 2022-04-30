@@ -35,21 +35,42 @@ def eat(food):
 
 @hello.route('/mypage')
 def testHTML():
-    aurora_img = url_for('static', filename="images/Aurora.jpg")
-    page = '''
-    <html>
-        <head>
-            <title>My Home Page</title>
-        </head>
-        <br/>
-            <body>
-            <h1>Hello!</h1>
-            <hr/>
-            <p>This is a <b>paragraph</b></p>
-            <a href="/today"><img src = ''' + aurora_img + ''' alt = "aurora image" title = "aurora" width="112" height="160"/></a>
-        </body>
-    </html>'''
+    pageName = "Welcome to my Home"
+    cssName = url_for('static', filename='mystyle.css')
+    person = {"username": "roy"}
+    aurora_img = url_for('static', filename='images/Aurora.jpg')
+    myList = [
+        {
+            'author': {'username': 'John'},
+            'body': 'What a beautiful day!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'That was a great movie'
+
+        }
+    ]
+    page = render_template('test.html', title=pageName, user=person, picName=aurora_img, posts=myList, mycssname=cssName)
     return page
+
+
+# @hello.route('/mypage')
+# def testHTML():
+#     aurora_img = url_for('static', filename="images/Aurora.jpg")
+#     page = '''
+#     <html>
+#         <head>
+#             <title>My Home Page</title>
+#         </head>
+#         <br/>
+#             <body>
+#             <h1>Hello!</h1>
+#             <hr/>
+#             <p>This is a <b>paragraph</b></p>
+#             <a href="/today"><img src = ''' + aurora_img + ''' alt = "aurora image" title = "aurora" width="112" height="160"/></a>
+#         </body>
+#     </html>'''
+#     return page
 
 
 @hello.route('/viewproduct/<jewel>/')
@@ -76,3 +97,4 @@ def hello(name=None):
     # berry_image = url_for('static', filename='images/image001.jpg')
     imageURL = url_for('static', filename='images/')  # interesting can use filename as file path to images
     return render_template('hello.html', name=name, imageURL=imageURL)
+

@@ -1,0 +1,10 @@
+body {
+    background-color: cyan;
+}
+
+p {
+    font-family: Time New Roman;
+    font-size: 14px;
+    margin-left: 20px;
+    border: 1px blue solid;
+}

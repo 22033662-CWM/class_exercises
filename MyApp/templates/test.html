@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet"
+        type='text/css'
+        href={{mycssname}}/>
+
+        {% if title %}
+        <title>{{title}}</title>
+        {% else %}
+        <title>There is no Title</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Hello {{user.username}}</h1>
+        <p>How are you today?</p>
+        {% for post in posts %}
+        <p>{{ post.author.username }} says: <b>{{ post.body}}</b></p>
+        {% endfor %}
+        <a href='/today' target='_blank'>
+        <img src = {{picName}} title = 'Aurora' width='112' height='160'></a>
+        <p></p>
+        <a href="/day">Say Goodbye</a>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+    <body>
+        <form>
+            <p>First Name: <input type='text' name = 'firstName' required
+                placeholder='enter your name here' autofocus /></p>
+            <p>Phone Number: <input type='number' name = 'phoneNum'/></p>
+            <p>E-mail: <input type='email' name = 'email'/></p>
+            <p>Password: <input type='password' name = 'pw'/></p>
+            <p>Select your favorite drinks:</p>
+            <input type='radio' name='drinks' value = 'Water' checked/>Water<br/>
+            <input type='radio' name='drinks' value = 'Sprite'/>Sprite<br/>
+            <input type='radio' name='drinks' value = 'Juice'/>Juice<br/>
+
+            <p>Select your preferred fruits:;</p>
+            <input type='checkbox' name='fruits' value = 'Apple' checked/>Apple<br/>
+            <input type='checkbox' name='fruits' value = 'Orange'/>Orange<br/>
+            <input type='checkbox' name='fruits' value = 'Banana'/>Banana<br/>
+            <p>Score</p>
+            <p><input type='range' min='0' max'10' step='2'/></p>
+            <p>Colour: <input type = 'color'></p>
+            <p>Birthday: <input type='date'></p>
+
+            <textarea cols='40' rows='5' name='comments'>
+have a nice day
+            </textarea>
+
+            <p>
+            <select name='pets'>
+                <option value = 'cat'>cat</option>
+                <option value = 'dog'>dog</option>
+                <option value = 'hamster' selected>hamster</option>
+            </select>
+            </p>
+
+            <p><input type='submit' value = 'Submit'/><input type ='reset' value = "Reset All"/></p>
+        </form>
+    </body>
+</html>
