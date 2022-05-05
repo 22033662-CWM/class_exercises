@@ -1,0 +1,21 @@
+<html>
+    <title>{{title}}</title>
+    <head>
+        <link rel="stylesheet"
+        type="text/css"
+        href={{cssStyleName}}/>
+        <style type="text/css">
+            .blacktext {color: black; font-family: Verdana; font-family: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Added Employee</h1>
+            <p>{{ employee }}</p>
+            <p>name: <span class="blacktext">{{ employee[0] }}</span></p>
+            <p>email: <span class="blacktext">{{ employee[1] }}</span></p>
+            <p>mobile: <span class="blacktext"> {{ employee[2] }}</span></p>
+            <p>department: <span class="blacktext">{{ employee[3] }}</span></p>
+            <p>salary: <span class="blacktext">{{ employee[4] }}</span></p>
+            <p>insurance policy no.: <span class="blacktext">{{ employee[5] }}</span></p>
+    </body>
+</html>

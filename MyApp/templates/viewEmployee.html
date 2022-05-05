@@ -1,0 +1,44 @@
+<html>
+    <title>{{title}}</title>
+    <head>
+        <link rel="stylesheet"
+        type="text/css"
+        href={{cssStyleName}}/>
+        <style type="text/css">
+            .blacktext {color: black; font-family: Verdana; font-family: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Employees Records</h1>
+        <table border = 1>
+            <tr>
+            <th>EmployeeID</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Mobile</th>
+            <th>Department</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+        <td>{{ employee[0]}}</td>
+        <td>{{ employee[1]}}</td>
+        <td>{{ employee[2]}}</td>
+        <td>{{ employee[3]}}</td>
+        <td>{{ employee[4]}}</td>
+        <td>
+            <form action="{{url_for('editEmployee', employee_id=employee[0])}}" method="POST">
+            <input type="submit" value="Edit">
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('deleteEmployee', employee_id=employee[0])}}" method="POST">
+            <input type="submit" value="Delete">
+            </form>
+        </td>
+        {% endfor %}
+        </tr>
+        </table>
+    </body>
+</html>

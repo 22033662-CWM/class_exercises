@@ -2,11 +2,11 @@
     <head>
         <link rel="stylesheet"
         type="text/css"
-        href="addEmployee.css"/>
+        href={{cssStyleName}}/>
         
     </head>
     <body>
-        <form action="" method="POST" >
+        <form action="/form" method="POST" >
             <h1>Add Employee</h1>
             <p>Name: <input type='text' name = 'employeeName' required/></p>
             <p>E-mail: <input type='email' name = 'employeeEmail' required /></p>
@@ -14,8 +14,7 @@
             <p>Department: <input type='text' name = 'employeeDept' required /></p>
             <p>Salary: <input type='number' name = 'employeeSalary' required /></p>
             <p>Insurance Policy No.: <input type='text' name = 'employeeInsurance'/></p>
-
-             <p><input type='submit' value = 'Submit'/></p>
+            <p><input type='submit' value = 'Submit'/></p>
         </form>
     </body>
 </html>
